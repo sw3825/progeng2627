@@ -1,0 +1,56 @@
+Exercise: fruit sets¶
+
+Consider two warehouses that contain several varieties of fruits. This information is stored in text files.
+
+For example warehouse1.txt may contain:
+
+strawberries
+apples
+watermelons
+blackberries
+lemons
+pears
+
+And warehouse2.txt may contain:
+
+watermelons
+blueberries
+apples
+grapes
+
+We would like the program to create two text files, union.txt and intersection.txt.
+
+If the input is as shown above, then union.txt should contain these elements (in any order):
+
+strawberries
+apples
+watermelons
+blackberries
+lemons
+pears
+blueberries
+grapes
+
+And intersection.txt should contain these elements (in any order):
+
+apples
+watermelons
+
+For the purpose of computing the union implement the following function:
+
+void union_vector(const std::vector<std::string>& vin1, const std::vector<std::string>& vin2, std::vector<std::string>& vout)
+
+For the intersection implement the following function:
+
+void intersection_vector(const std::vector<std::string>& vin1, const std::vector<std::string>& vin2, std::vector<std::string>& vout)
+
+Also implement the following function with similar behaviour to ones we have seen before and use it both in union_vector and intersection_vector:
+
+int search_vector(std::string s, const std::vector<std::string>& vin)
+
+Write a main that:
+
+    Reads the names of the two text files for the input.
+    Reads the content of the text files and stores the information into vectors.
+    Computes the union using union_vector and stores the result in a text file called union.txt.
+    Computes the intersection using intersection_vector and stores the result in a text file called intersection.txt.
